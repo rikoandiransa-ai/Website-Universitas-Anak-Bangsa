@@ -22,8 +22,8 @@ const DEFAULT_DB_DATA: DatabaseSchema = {
   ],
   students: [
     {
-      id: 'NIM1001',
-      name: 'Riko Andiransa',
+      id: '250222003',
+      name: 'Riko',
       studyProgram: 'Informatics Engineering',
       faculty: 'Computer Science',
       email: 'riko@unaba.ac.id',
@@ -31,39 +31,57 @@ const DEFAULT_DB_DATA: DatabaseSchema = {
       password: bcrypt.hashSync('student123', 10)
     },
     {
-      id: 'NIM1002',
-      name: 'Aditya Pratama',
+      id: '250222006',
+      name: 'Alfia Shilka Firhandani',
       studyProgram: 'Information Systems',
       faculty: 'Computer Science',
-      email: 'aditya@unaba.ac.id',
-      username: 'aditya',
+      email: 'alfia@unaba.ac.id',
+      username: 'alfia',
       password: bcrypt.hashSync('student123', 10)
     },
     {
-      id: 'NIM1003',
-      name: 'Siti Rahma',
+      id: '250222004',
+      name: 'Deni Davitra',
       studyProgram: 'Digital Business',
       faculty: 'Economics & Business',
-      email: 'siti@unaba.ac.id',
-      username: 'siti',
+      email: 'deni@unaba.ac.id',
+      username: 'deni',
       password: bcrypt.hashSync('student123', 10)
     },
     {
-      id: 'NIM1004',
-      name: 'Budi Santoso',
+      id: '250222001',
+      name: 'Nayla Syifa Ramadhani',
       studyProgram: 'Management',
       faculty: 'Economics & Business',
-      email: 'budi@unaba.ac.id',
-      username: 'budi',
+      email: 'nayla@unaba.ac.id',
+      username: 'nayla',
       password: bcrypt.hashSync('student123', 10)
     },
     {
-      id: 'NIM1005',
-      name: 'Dewi Lestari',
+      id: '250222007',
+      name: 'Apriliani Meka',
       studyProgram: 'Visual Communication Design',
       faculty: 'Creative Industry',
-      email: 'dewi@unaba.ac.id',
-      username: 'dewi',
+      email: 'apriliani@unaba.ac.id',
+      username: 'apriliani',
+      password: bcrypt.hashSync('student123', 10)
+    },
+    {
+      id: '250222005',
+      name: 'Andora Lavincy',
+      studyProgram: 'Informatics Engineering',
+      faculty: 'Computer Science',
+      email: 'andora@unaba.ac.id',
+      username: 'andora',
+      password: bcrypt.hashSync('student123', 10)
+    },
+    {
+      id: '250222002',
+      name: 'Galang Saputra',
+      studyProgram: 'Information Systems',
+      faculty: 'Computer Science',
+      email: 'galang@unaba.ac.id',
+      username: 'galang',
       password: bcrypt.hashSync('student123', 10)
     }
   ],
@@ -120,22 +138,27 @@ const DEFAULT_DB_DATA: DatabaseSchema = {
     }
   ],
   absences: [
-    { id: 'ABS001', studentId: 'NIM1001', activityId: 'ACT001', date: '2026-07-15', time: '09:15', status: 'Present' },
-    { id: 'ABS002', studentId: 'NIM1002', activityId: 'ACT001', date: '2026-07-15', time: '09:10', status: 'Present' },
-    { id: 'ABS003', studentId: 'NIM1003', activityId: 'ACT001', date: '2026-07-15', time: '09:30', status: 'Present' },
-    { id: 'ABS004', studentId: 'NIM1004', activityId: 'ACT001', date: '2026-07-15', time: '10:00', status: 'Absent' },
-    { id: 'ABS005', studentId: 'NIM1005', activityId: 'ACT001', date: '2026-07-15', time: '09:05', status: 'Present' },
+    { id: 'ABS001', studentId: '250222003', activityId: 'ACT001', date: '2026-07-15', time: '09:15', status: 'Present' },
+    { id: 'ABS002', studentId: '250222006', activityId: 'ACT001', date: '2026-07-15', time: '09:10', status: 'Present' },
+    { id: 'ABS003', studentId: '250222004', activityId: 'ACT001', date: '2026-07-15', time: '09:30', status: 'Present' },
+    { id: 'ABS004', studentId: '250222001', activityId: 'ACT001', date: '2026-07-15', time: '10:00', status: 'Absent' },
+    { id: 'ABS005', studentId: '250222007', activityId: 'ACT001', date: '2026-07-15', time: '09:05', status: 'Present' },
     
-    { id: 'ABS006', studentId: 'NIM1001', activityId: 'ACT002', date: '2026-07-20', time: '13:05', status: 'Present' },
-    { id: 'ABS007', studentId: 'NIM1002', activityId: 'ACT002', date: '2026-07-20', time: '13:10', status: 'Present' },
-    { id: 'ABS008', studentId: 'NIM1003', activityId: 'ACT002', date: '2026-07-20', time: '13:40', status: 'Sick' },
-    { id: 'ABS009', studentId: 'NIM1004', activityId: 'ACT002', date: '2026-07-20', time: '13:00', status: 'Present' },
+    { id: 'ABS006', studentId: '250222003', activityId: 'ACT002', date: '2026-07-20', time: '13:05', status: 'Present' },
+    { id: 'ABS007', studentId: '250222006', activityId: 'ACT002', date: '2026-07-20', time: '13:10', status: 'Present' },
+    { id: 'ABS008', studentId: '250222004', activityId: 'ACT002', date: '2026-07-20', time: '13:40', status: 'Sick' },
+    { id: 'ABS009', studentId: '250222001', activityId: 'ACT002', date: '2026-07-20', time: '13:00', status: 'Present' },
     
-    { id: 'ABS010', studentId: 'NIM1001', activityId: 'ACT005', date: '2026-07-01', time: '10:02', status: 'Present' },
-    { id: 'ABS011', studentId: 'NIM1002', activityId: 'ACT005', date: '2026-07-01', time: '10:15', status: 'Present' },
-    { id: 'ABS012', studentId: 'NIM1005', activityId: 'ACT005', date: '2026-07-01', time: '10:05', status: 'Present' },
-    { id: 'ABS013', studentId: 'NIM1003', activityId: 'ACT005', date: '2026-07-01', time: '09:55', status: 'Permission' },
-    { id: 'ABS014', studentId: 'NIM1004', activityId: 'ACT005', date: '2026-07-01', time: '10:30', status: 'Absent' }
+    { id: 'ABS010', studentId: '250222003', activityId: 'ACT005', date: '2026-07-01', time: '10:02', status: 'Present' },
+    { id: 'ABS011', studentId: '250222006', activityId: 'ACT005', date: '2026-07-01', time: '10:15', status: 'Present' },
+    { id: 'ABS012', studentId: '250222007', activityId: 'ACT005', date: '2026-07-01', time: '10:05', status: 'Present' },
+    { id: 'ABS013', studentId: '250222004', activityId: 'ACT005', date: '2026-07-01', time: '09:55', status: 'Permission' },
+    { id: 'ABS014', studentId: '250222001', activityId: 'ACT005', date: '2026-07-01', time: '10:30', status: 'Absent' },
+
+    { id: 'ABS015', studentId: '250222005', activityId: 'ACT001', date: '2026-07-15', time: '09:08', status: 'Present' },
+    { id: 'ABS016', studentId: '250222002', activityId: 'ACT001', date: '2026-07-15', time: '09:22', status: 'Present' },
+    { id: 'ABS017', studentId: '250222005', activityId: 'ACT002', date: '2026-07-20', time: '13:00', status: 'Present' },
+    { id: 'ABS018', studentId: '250222002', activityId: 'ACT002', date: '2026-07-20', time: '13:12', status: 'Present' }
   ]
 };
 

@@ -92,11 +92,13 @@ ON DUPLICATE KEY UPDATE `username`=`username`;
 -- 2. Insert Students
 -- Passwords are hashed with bcrypt (salt rounds = 10) for 'student123'
 INSERT INTO `students` (`id`, `name`, `study_program`, `faculty`, `email`, `username`, `password`) VALUES
-('NIM1001', 'Riko Andiransa', 'Informatics Engineering', 'Computer Science', 'riko@unaba.ac.id', 'riko', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
-('NIM1002', 'Aditya Pratama', 'Information Systems', 'Computer Science', 'aditya@unaba.ac.id', 'aditya', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
-('NIM1003', 'Siti Rahma', 'Digital Business', 'Economics & Business', 'siti@unaba.ac.id', 'siti', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
-('NIM1004', 'Budi Santoso', 'Management', 'Economics & Business', 'budi@unaba.ac.id', 'budi', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
-('NIM1005', 'Dewi Lestari', 'Visual Communication Design', 'Creative Industry', 'dewi@unaba.ac.id', 'dewi', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS')
+('250222003', 'Riko', 'Informatics Engineering', 'Computer Science', 'riko@unaba.ac.id', 'riko', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222006', 'Alfia Shilka Firhandani', 'Information Systems', 'Computer Science', 'alfia@unaba.ac.id', 'alfia', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222004', 'Deni Davitra', 'Digital Business', 'Economics & Business', 'deni@unaba.ac.id', 'deni', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222001', 'Nayla Syifa Ramadhani', 'Management', 'Economics & Business', 'nayla@unaba.ac.id', 'nayla', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222007', 'Apriliani Meka', 'Visual Communication Design', 'Creative Industry', 'apriliani@unaba.ac.id', 'apriliani', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222005', 'Andora Lavincy', 'Informatics Engineering', 'Computer Science', 'andora@unaba.ac.id', 'andora', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS'),
+('250222002', 'Galang Saputra', 'Information Systems', 'Computer Science', 'galang@unaba.ac.id', 'galang', '$2a$10$3Y8.YAtXit06g8BwB7r8Xuk0H9mG8T97iU8pSoxC3C4uA0YfevXjS')
 ON DUPLICATE KEY UPDATE `name`=`name`;
 
 -- 3. Insert Activities
@@ -110,18 +112,18 @@ ON DUPLICATE KEY UPDATE `activity_name`=`activity_name`;
 
 -- 4. Insert Absences
 INSERT INTO `absences` (`id`, `student_id`, `activity_id`, `date`, `time`, `status`) VALUES
-('ABS001', 'NIM1001', 'ACT001', '2026-07-15', '09:15:00', 'Present'),
-('ABS002', 'NIM1002', 'ACT001', '2026-07-15', '09:10:00', 'Present'),
-('ABS003', 'NIM1003', 'ACT001', '2026-07-15', '09:30:00', 'Present'),
-('ABS004', 'NIM1004', 'ACT001', '2026-07-15', '10:00:00', 'Absent'),
-('ABS005', 'NIM1005', 'ACT001', '2026-07-15', '09:05:00', 'Present'),
-('ABS006', 'NIM1001', 'ACT002', '2026-07-20', '13:05:00', 'Present'),
-('ABS007', 'NIM1002', 'ACT002', '2026-07-20', '13:10:00', 'Present'),
-('ABS008', 'NIM1003', 'ACT002', '2026-07-20', '13:40:00', 'Sick'),
-('ABS009', 'NIM1004', 'ACT002', '2026-07-20', '13:00:00', 'Present'),
-('ABS010', 'NIM1001', 'ACT005', '2026-07-01', '10:02:00', 'Present'),
-('ABS011', 'NIM1002', 'ACT005', '2026-07-01', '10:15:00', 'Present'),
-('ABS012', 'NIM1005', 'ACT005', '2026-07-01', '10:05:00', 'Present'),
-('ABS013', 'NIM1003', 'ACT005', '2026-07-01', '09:55:00', 'Permission'),
-('ABS014', 'NIM1004', 'ACT005', '2026-07-01', '10:30:00', 'Absent')
+('ABS001', '250222003', 'ACT001', '2026-07-15', '09:15:00', 'Present'),
+('ABS002', '250222006', 'ACT001', '2026-07-15', '09:10:00', 'Present'),
+('ABS003', '250222004', 'ACT001', '2026-07-15', '09:30:00', 'Present'),
+('ABS004', '250222001', 'ACT001', '2026-07-15', '10:00:00', 'Absent'),
+('ABS005', '250222007', 'ACT001', '2026-07-15', '09:05:00', 'Present'),
+('ABS006', '250222003', 'ACT002', '2026-07-20', '13:05:00', 'Present'),
+('ABS007', '250222006', 'ACT002', '2026-07-20', '13:10:00', 'Present'),
+('ABS008', '250222004', 'ACT002', '2026-07-20', '13:40:00', 'Sick'),
+('ABS009', '250222001', 'ACT002', '2026-07-20', '13:00:00', 'Present'),
+('ABS010', '250222003', 'ACT005', '2026-07-01', '10:02:00', 'Present'),
+('ABS011', '250222006', 'ACT005', '2026-07-01', '10:15:00', 'Present'),
+('ABS012', '250222007', 'ACT005', '2026-07-01', '10:05:00', 'Present'),
+('ABS013', '250222004', 'ACT005', '2026-07-01', '09:55:00', 'Permission'),
+('ABS014', '250222001', 'ACT005', '2026-07-01', '10:30:00', 'Absent')
 ON DUPLICATE KEY UPDATE `status`=`status`;
